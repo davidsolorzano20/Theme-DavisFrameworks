@@ -1,4 +1,47 @@
 #!/usr/bin/env bash
+
+echo 'Create Index.html'
+touch index.html
+echo '<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DavisTheme</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <style type="text/css">
+    html, body {
+      background-color: #fff;
+      color: #636b6f;
+      font-weight: 100;
+      height: 100vh;
+      margin: 0;
+    }
+    h1.texto {
+      font-size: 8em;
+      text-align: center;
+      margin-top: 20%;
+      text-blink: 0.1px;
+    }
+  </style>
+
+</head>
+<body>
+<div class="container">
+  <div class="container-fluid">
+
+  </div>
+  <div class="row">
+    <h1 class="texto">DavisTheme</h1>
+  </div>
+</div>
+
+<script src="assets/libraries/jquery.min.js"></script>
+<script src="assets/libraries/bootstrap.min.js"></script>
+<script src="assets/libraries/semantic.min.js"></script>
+<script src="assets/libraries/freewall.js"></script>
+</body>
+</html>' >> index.html
+
 echo 'Rename Semantic css to scss and font-awesome'
 mv bower_components/font-awesome/css/font-awesome.min.css bower_components/font-awesome/css/_awesome.scss
 mv bower_components/semantic/dist/semantic.min.css bower_components/semantic/dist/_semantic.scss
@@ -38,4 +81,3 @@ cd ..
 mkdir 03_templates
 cd 03_templates
 touch _01-landing-page.scss
-cd
